@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>Penn State</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -16,13 +16,68 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet"
+        />
     </head>
 
     <body>
-        <header>
-            <!-- place navbar here -->
-        </header>
-        <main></main>
+        <!--Navbar Starts here-->
+    <header class="px-0">
+        <div class="text-center">
+          <img src="images/psu.png" width="160rem" />
+        </div>
+        <nav
+          class="navbar navbar-expand-lg bgcolor p-2 px-lg-5 py-lg-3 pt-serif-bold"
+          style="font-size: calc(0.8rem + 0.6vw);"
+        >
+          <div class="container-fluid px-0 px-lg-5">
+            <a class="navbar-brand" href="#"
+              ><img src="images/penn.png" width="120rem"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item px-3">
+                  <a class="nav-link active" style="color:white; font-weight: 900;" aria-current="page" href="index.html"
+                    >About Us</a
+                  >
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nav-link active" style="color:white; font-weight: 900;" href="store.html">Shop Online</a>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nav-link active" style="color:white; font-weight: 900;" href="location.html">Location</a>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nav-link active" style="color:white; font-weight: 900;" href="contact.html">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!--Navbar ends here-->
+
+
+      <div class="background" style="background-image: url(images/psuimg.jpg);">
+
+      </div>
+
         <footer>
             <!-- place footer here -->
         </footer>
@@ -38,5 +93,6 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
+        <script src="script.js"></script>
     </body>
 </html>
