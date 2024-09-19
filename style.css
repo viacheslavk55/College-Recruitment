@@ -15,3 +15,16 @@ body,html{
     position: relative;
     overflow: hidden;
   }
+.noto-serif-pro {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.pt-serif-bold {
+    font-family: "PT Serif", serif;
+    font-weight: 600;
+    font-style: normal;
+  }

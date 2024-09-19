@@ -23,6 +23,9 @@
             href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
             rel="stylesheet"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -81,21 +84,55 @@
       </div>
 
 
-      <div class="container-fluid">
+      <div class="container-fluid px-0">
         <div class="row">
-          <div class="text-center col-8">
-            <img src="images/building.jpg" class="mt-5 mx-5" style="border-radius: 2%;">
+          <div class="text-center col-12 col-lg-8">
+            <img src="images/building.jpg" class="mt-5 mx-lg-5" style="border-radius: 2%; width: 90%;">
           </div>
-          <div class="col-4 text-center">
-            <div class="mt-5 mx-5" style="color: #0f1d41;">
-              <h1>We Are Penn State</h1>
-              <p>At Penn State, success is fueled by curiosity, collaboration, and a drive to make a difference. Join our community—more than 775,000 strong—dedicated to shaping a better world through education, research, and service.</p>
+          <div class="col-12 col-lg-4 text-center">
+            <div class="mt-5 mx-5 pt-serif-bold d-flex justify-content-center align-items-center h-100 " style="color: #0f1d41;">
+              <div>
+                <h1 class="pb-5" style="font-size: 3rem; font-weight: 900;">We Are Penn State</h1>
+                <p>At Penn State, success is fueled by curiosity, collaboration, and a drive to make a difference. Join our community—more than 775,000 strong—dedicated to shaping a better world through education, research, and service.</p>
+              </div>
+              
             </div>
               
           </div>
           
         </div>
+        <div class="row pt-5">
+          
+          <div class="col-12 col-lg-6 text-center">
+            <div class="mt-5 mx-5 pt-serif-bold d-flex justify-content-center align-items-center h-100 " style="color: #0f1d41;">
+              <div>
+                <h1 class="pb-5" style="font-size: 3rem; font-weight: 900;">Penn State Map</h1>
+                <p>Penn State University is located in State College, Pennsylvania, nestled in the scenic central region of the state, surrounded by mountains and rural landscapes.</p>
+                <p>Located at: 201 Old Main, University Park, PA 16802</p>
+                <p>Contact us at: (814) 865-4700</p>
+              </div>
+              
+            </div>
+              
+          </div>
+          <div class="text-center col-12 col-lg-6">
+            <img src="images/pennMap.jpg" class="mt-5 mx-lg-5" style="border-radius: 2%; width: 90%;">
+          </div>
+        </div>
+
+        <main style="background-color: #0f1d41;">
+          <div class="container" >
+              <h1 class="text-center pt-serif-bold mt-5 pt-3" style="color: white;">Explore the Available Majors!</h1>
+    
+              <input type="text" id="searchInput" class="form-control mb-3 fw-bolder mt-4" placeholder="Search...">
+    
+              <div class="row row-cols-1 row-cols-md-3 g-4 p-4 pt-serif-bold" id="productContainer">
+                  <!-- Product cards will be dynamically added here -->
+              </div>
+          </div>
+      </main>
       </div>
+      
 
         <footer>
             <!-- place footer here -->
