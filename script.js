@@ -1,58 +1,75 @@
-const products = [
+const majors = [
     {
-        name: "Wooden Block Set",
-        imageSrc: "images/block2.png",
-        description: "Build creativity and imagination with this high-quality, 72-piece block set. Made from naturally finished and smooth-sanded hardwood blocks, this set comes in a convenient wooden storage crate <br> Age 3+ <br> Size: 13” L x 12” W x 2” H.",
-        price: "$29.99",
-        onClickFunction: "blocks()"
+        name: "Accounting",
+        description: "The Accounting major provides a comprehensive education in financial reporting, taxation, auditing, and management accounting, preparing students for careers in public, corporate, or governmental accounting.",
+        requirement1: "Intermediate Accounting I & II",
+        requirement2: "Taxation",
+        requirement3: "Auditing",
+        requirement4: "Business Law",
+        requirement5: "Accounting Capstone or Internship"
     },
     {
-        name: "Wooden Boat",
-        imageSrc: "images/boat2.png",
-        description: "Set sail for bathtub adventures with this adorable wooden boat. Made from solid Maine white pine, this handcrafted toy floats and features rounded edges for safety. Includes two peg 'lobster people.' <br> For all ages <br> Size: 10.5' L x 4.5' W x 3.5' H.",
-        price: "$14.99",
-        onClickFunction: "boat()"
+        name: "Aerospace Engineer",
+        description: "The Aerospace Engineering major equips students with knowledge in aerodynamics, structural design, and spacecraft systems to prepare for careers in aviation and space exploration.",
+        requirement1: "Fluid Mechanics and Aerodynamics",
+        requirement2: "Aircraft and Spacecraft Structures",
+        requirement3: "Propulsion Systems",
+        requirement4: "Flight Dynamics and Control",
+        requirement5: "Aerospace Engineering Capstone or Design Project"
     },
     {
-        name: "Wooden Plane",
-        imageSrc: "images/plane1.png",
-        description: "Soar through imaginative skies with this classic wooden airplane. Handcrafted from sustainable Baltic birch wood with a safe, natural harvest finish and a spinning propeller. Your children will love this toy! <br> Age: Toddlers <br> Size: 3.5'H x 7'L x 7'W.",
-        price: "$19.99",
-        onClickFunction: "plane()"
+        name: "Architecture",
+        description: "The Architecture major provides students with the skills to design buildings and spaces, emphasizing aesthetics, functionality, sustainability, and structural integrity.",
+        requirement1: "Architectural Design Studios",
+        requirement2: "Building Materials and Construction",
+        requirement3: "Structural Systems",
+        requirement4: "History and Theory of Architecture",
+        requirement5: "Architectural Capstone or Design Thesis"
     },
     {
-        name: "Wooden Car",
-        imageSrc: "images/car1.png",
-        description: "This heirloom-quality wooden car is a timeless treasure. Handcrafted from domestic and exotic hardwoods with a clear lacquer finish, this unique car will inspire generations of imaginative play. <br> Age: Toddlers <br> Size: 12' L x 5' H x 3.5' W",
-        price: "$19.99",
-        onClickFunction: "car()"
+        name: "Criminal Justice",
+        description: "The Criminal Justice major explores the criminal justice system, law enforcement, corrections, and legal principles, preparing students for careers in law, public safety, and justice administration.",
+        requirement1: "Introduction to Criminal Justice",
+        requirement2: "Criminology",
+        requirement3: "Criminal Law and Procedure",
+        requirement4: "Corrections and Rehabilitation",
+        requirement5: "Criminal Justice Capstone or Internship"
     },
     {
-        name: "Train",
-        imageSrc: "images/train1.png",
-        description: "Embark on a charming journey with this beautiful handcrafted wooden train set. The train and three interchangeable carts display intricate details made from real beech wood.<br> Age: 3+ <br> Size 11'H x 84'L x 13'W",
-        price: "$24.99",
-        onClickFunction: "train()"
+        name: "Film Production",
+        description: "The Film Production major trains students in storytelling, cinematography, editing, and directing, preparing them for careers in film and media industries.",
+        requirement1: "Introduction to Film Production",
+        requirement2: "Screenwriting",
+        requirement3: "Cinematography",
+        requirement4: "Film Editing",
+        requirement5: "Film Production Capstone or Final Project"
     },
     {
-        name: "Duck",
-        imageSrc: "images/duck1.png",
-        description: "A charming and eco-friendly wooden duck toy, crafted from natural wood and other non-toxic materials, perfect for sparking imaginative play and encouraging fine motor skills in young children. <br> Age: Toddlers <br> Size 20'H x 50'L x 10'W",
-        price: "$19.99",
-        onClickFunction: "duck()"
+        name: "Nursing",
+        description: "The Nursing major prepares students with the knowledge and clinical skills necessary to provide patient care, promote health, and manage illness across various healthcare settings.",
+        requirement1: "Human Anatomy and Physiology",
+        requirement2: "Foundations of Nursing Practice",
+        requirement3: "Pharmacology",
+        requirement4: "Medical-Surgical Nursing",
+        requirement5: "Nursing Capstone or Clinical Practicum"
     }
 ]
 
-function generateProductHTML(product) {
+function generateProductHTML(majors) {
     return `
         <div class="col mb-4">
             <div class="card h-100">
-                <img src="${product.imageSrc}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">${product.name}</h5>
-                    <p class="card-text">${product.description}</p>
-                    <h4 class="card-price">${product.price}</h4>
-                    <a onclick="${product.onClickFunction}"  class="btn btn a1">Add to cart</a>
+                    <h1 class="card-title">${majors.name}</h1>
+                    <p class="card-text"><u>Description:</u> ${majors.description}</p>
+                    <h4 class="card-price">Requirements:</h4>
+                    <ul>
+                        <li>${majors.requirement1}</li>
+                        <li>${majors.requirement2}</li>
+                        <li>${majors.requirement3}</li>
+                        <li>${majors.requirement4}</li>
+                        <li>${majors.requirement5}</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -63,14 +80,14 @@ function generateProducts(productsToShow) {
     const productContainer = document.getElementById("productContainer");
     productContainer.innerHTML = "" // Clearing any previous content
 
-    productsToShow.forEach(product => {
-        productContainer.innerHTML += generateProductHTML(product)
+    productsToShow.forEach(majors => {
+        productContainer.innerHTML += generateProductHTML(majors)
     })
 }
 
 function filterProducts(searchText) {
-    const filteredProducts = products.filter(product => {
-        const name = product.name.toLowerCase()
+    const filteredProducts = majors.filter(majors => {
+        const name = majors.name.toLowerCase()
         return name.includes(searchText.toLowerCase())
     })
 
@@ -84,13 +101,13 @@ function init() {
         const searchText = this.value.trim()
 
         if (searchText === '') {
-            generateProducts(products) // Show all products if search bar is empty
+            generateProducts(majors) // Show all products if search bar is empty
         } else {
             filterProducts(searchText) // Filter products based on search text
         }
     })
 
-    generateProducts(products) // Show all products initially
+    generateProducts(majors) // Show all products initially
 }
 
 init()
